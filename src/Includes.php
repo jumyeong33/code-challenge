@@ -16,9 +16,9 @@ function Includes(array $n, array $m) : bool
             return false;
         }
 
-        $nSet[$mItem] = $nSet[$mItem] -1;
+        $nSet[$mItem] = $nSet[$mItem] - 1;
 
-        if (($nSet[$mItem]) === -1) {
+        if ($nSet[$mItem] === -1) {
             return false;
         }
     }
@@ -26,6 +26,6 @@ function Includes(array $n, array $m) : bool
     return true;  // 1
 }
 
-$result = Includes(["a", "b", "d"], ["a", "b","b"]);
+$result = Includes(["a", "b", "d"], ["a", "b", "b"]);
 
 echo $result ? " Yes \n" : "\n no \n";

@@ -1,10 +1,9 @@
 <?php
 
-
-function Includes(array $n, array $m) : bool
+function Includes(array $l, array $m) : bool
 {
     $nSet = [];
-    foreach ($n as $nItem) {
+    foreach ($l as $nItem) {
         if (array_key_exists($nItem, $nSet)) {
             $nSet[$nItem] = $nSet[$nItem] + 1;
         } else {
@@ -24,15 +23,13 @@ function Includes(array $n, array $m) : bool
         }
     }
 
-    return true;  // 1
+    return true;
 }
 
 function Intersection(array $l, array $m) : array
 {
     $multiSet = [];
     $result = [];
-    //$l = [1,2,2,3,5]
-    //$m = [1,2,2,2,5,8]
 
     foreach ($l as $lItem) {
         if (array_key_exists($lItem, $multiSet)) {
